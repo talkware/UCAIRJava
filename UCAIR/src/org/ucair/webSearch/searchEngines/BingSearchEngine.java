@@ -5,14 +5,9 @@ import java.net.URLEncoder;
 
 import javax.net.ssl.SSLPeerUnverifiedException;
 
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.protocol.BasicHttpContext;
-import org.apache.http.protocol.HttpContext;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.ucair.util.HttpUtil;
@@ -41,11 +36,10 @@ public class BingSearchEngine implements SearchEngine {
     @Override
     public String getSearchUrl(final SearchRequest request) {
         try {
-            final String encodedQuery = URLEncoder.encode(
-                    "\'" + request.getQuery() + "\'", "UTF-8");
+            final String encodedQuery = URLEncoder.encode(request.getQuery(), "UTF-8");
             return String
-                    .format("https://api.datamarket.azure.com/Bing/Search/Web?Query=%s&$format=json&$skip=%d",
-                            encodedQuery, (request.getStartPos() - 1));
+                    .format("https://api.cognitive.microsoft.com/bing/v5.0/search?q=%s&offset=%d&count=%d&mkt=en-us",
+                            encodedQuery, request.getStartPos() - 1, request.getCount());
         } catch (final IOException e) {
             throw new RuntimeException(e);
         }
@@ -69,16 +63,9 @@ public class BingSearchEngine implements SearchEngine {
 
     private String downloadPage(final String url) throws IOException {
         final HttpClient httpClient = new DefaultHttpClient();
-        final HttpContext localContext = new BasicHttpContext();
 
         final HttpGet request = new HttpGet(url);
-        try {
-            request.addHeader(new BasicScheme().authenticate(
-                    new UsernamePasswordCredentials(bingAccountKey,
-                            bingAccountKey), request, localContext));
-        } catch (final AuthenticationException e) {
-            throw new IOException("Failed to authenticate", e);
-        }
+        request.addHeader("Ocp-Apim-Subscription-Key", bingAccountKey);
 
         return downloadWithRetry(httpClient, request);
     }
@@ -98,7 +85,7 @@ public class BingSearchEngine implements SearchEngine {
             }
         }
     }
-
+    
     private SearchResponse parsePage(final SearchRequest request,
             final String pageContent) throws IOException {
         final SearchResponse response = new SearchResponse(request.getQuery());
@@ -106,12 +93,12 @@ public class BingSearchEngine implements SearchEngine {
         final ObjectMapper mapper = new ObjectMapper();
         final JsonNode root = mapper.readValue(pageContent, JsonNode.class);
 
-        for (final JsonNode resultNode : root.path("d").path("results")) {
-            final String title = resultNode.path("Title").textValue();
-            final String description = resultNode.path("Description")
+        for (final JsonNode resultNode : root.path("webPages").path("value")) {
+            final String title = resultNode.path("name").textValue();
+            final String description = resultNode.path("snippet")
                     .textValue();
-            final String url = resultNode.path("Url").textValue();
-            final String displayUrl = resultNode.path("DisplayUrl").textValue();
+            final String url = resultNode.path("url").textValue();
+            final String displayUrl = resultNode.path("displayUrl").textValue();
             if (url != null) {
                 final SearchResult result = new SearchResult(url, title,
                         description, displayUrl);

@@ -4,81 +4,47 @@
 	<classpathentry kind="src" path="etc"/>
 	<classpathentry kind="src" path="web"/>
 	<classpathentry kind="src" path="tst"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="D:/Code/jars/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/commons-lang-2.6.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/commons-lang3-3.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/junit-4.10.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsoup-1.7.1.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jetty-all-8.1.8.v20121106.jar" sourcepath="D:/Code/jars/jetty-all-8.1.8.v20121106-sources.jar">
-		<attributes>
-			<attribute name="source_encoding" value="UTF-8"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/servlet-api-3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsp/com.sun.el-2.2.0.v201108011116.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsp/javax.el-2.2.0.v201108011116.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsp/javax.servlet.jsp.jstl-1.2.0.v201105211821.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsp/javax.servlet.jsp-2.2.0.v201112011158.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsp/org.apache.jasper.glassfish-2.2.2.v201112011158.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsp/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jsp/org.eclipse.jdt.core-3.7.1.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/lucene-4.0.0/core/lucene-core-4.0.0.jar" sourcepath="D:/Code/lucene-4.0.0">
-		<attributes>
-			<attribute name="source_encoding" value="UTF-8"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/lucene-4.0.0/analysis/common/lucene-analyzers-common-4.0.0.jar" sourcepath="D:/Code/lucene-4.0.0">
-		<attributes>
-			<attribute name="source_encoding" value="UTF-8"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/lucene-4.0.0/queries/lucene-queries-4.0.0.jar" sourcepath="D:/Code/lucene-4.0.0">
-		<attributes>
-			<attribute name="source_encoding" value="UTF-8"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/lucene-4.0.0/queryparser/lucene-queryparser-4.0.0.jar" sourcepath="D:/Code/lucene-4.0.0">
-		<attributes>
-			<attribute name="source_encoding" value="UTF-8"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-beans-3.2.0.RELEASE.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/D:/Code/jars/spring-framework-3.2/libs/spring-beans-3.2.0.RELEASE-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-core-3.2.0.RELEASE.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/D:/Code/jars/spring-framework-3.2/libs/spring-core-3.2.0.RELEASE-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-context-3.2.0.RELEASE.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/D:/Code/jars/spring-framework-3.2/libs/spring-context-3.2.0.RELEASE-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-context-support-3.2.0.RELEASE.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/D:/Code/jars/spring-framework-3.2/libs/spring-context-support-3.2.0.RELEASE-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-expression-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/guava-14.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-webmvc-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-web-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-test-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/commons-codec-1.8.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jackson-core-2.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jackson-databind-2.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/jackson-annotations-2.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/httpcore-4.2.4.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/httpclient-4.2.5.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/spring-framework-3.2/libs/spring-aop-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/javax.inject-1.jar"/>
-	<classpathentry kind="lib" path="D:/Code/jars/ecj-4.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/com.sun.el-2.2.0.v201108011116.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/commons-lang3-3.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/ecj-4.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/httpclient-4.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/httpcore-4.2.4.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/jackson-annotations-2.9.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/jackson-core-2.9.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/jackson-databind-2.9.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/javax.el-2.2.0.v201108011116.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/javax.inject-1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/javax.servlet.jsp.jstl-1.2.0.v201105211821.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/javax.servlet.jsp-2.2.0.v201112011158.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/jetty-all-8.1.8.v20121106.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/jsoup-1.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/lucene-analyzers-common-4.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/lucene-core-4.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/lucene-queries-4.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/lucene-queryparser-4.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/org.apache.jasper.glassfish-2.2.2.v201112011158.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/org.eclipse.jdt.core-3.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/servlet-api-3.0.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-aop-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-aspects-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-beans-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-context-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-context-support-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-core-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-expression-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-test-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-web-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/spring-webmvc-4.3.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/ucair/lib/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

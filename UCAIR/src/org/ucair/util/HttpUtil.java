@@ -2,6 +2,7 @@ package org.ucair.util;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ public class HttpUtil {
         if (entity != null) {
             final InputStream in = entity.getContent();
             try {
-                final List<String> lines = IOUtils.readLines(in);
+                final List<String> lines = IOUtils.readLines(in, StandardCharsets.UTF_8);
                 return StringUtils.join(lines, '\n');
             } catch (final IOException e) {
                 throw e;
