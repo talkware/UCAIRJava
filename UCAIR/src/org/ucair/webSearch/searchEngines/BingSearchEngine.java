@@ -21,6 +21,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Component("bingSearchEngine")
 public class BingSearchEngine implements SearchEngine {
+	
+    @Value("#{appConfig.get('bing_search_engine.api_url')}")
+    private String bingAPIUrl;	
 
     @Value("#{appConfig.get('bing_search_engine.account_key')}")
     private String bingAccountKey;
@@ -38,7 +41,7 @@ public class BingSearchEngine implements SearchEngine {
         try {
             final String encodedQuery = URLEncoder.encode(request.getQuery(), "UTF-8");
             return String
-                    .format("https://api.cognitive.microsoft.com/bing/v5.0/search?q=%s&offset=%d&count=%d&mkt=en-us",
+                    .format(bingAPIUrl,
                             encodedQuery, request.getStartPos() - 1, request.getCount());
         } catch (final IOException e) {
             throw new RuntimeException(e);
